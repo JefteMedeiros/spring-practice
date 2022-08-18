@@ -46,6 +46,7 @@ public class DepartmentServiceImpl implements DepartmentService {
                 && !"".equalsIgnoreCase(department.getDepartmentName())) {
             depDB.setDepartmentName(department.getDepartmentName());
         }
+
         if(Objects.nonNull(department.getDepartmentAddress())
                 && !"".equalsIgnoreCase(department.getDepartmentAddress())) {
             depDB.setDepartmentAddress(department.getDepartmentAddress());
