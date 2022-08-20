@@ -1,6 +1,7 @@
 package com.learning.springboot.controller;
 
 import com.learning.springboot.entity.Department;
+import com.learning.springboot.error.DepartmentNotFoundException;
 import com.learning.springboot.service.DepartmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +22,7 @@ public class DepartmentController {
     }
 
     @GetMapping("/{id}")
-    public Department getDepartmentById(@PathVariable("id") Long departmendId){
+    public Department getDepartmentById(@PathVariable("id") Long departmendId) throws DepartmentNotFoundException {
         return departmentService.getDepartmentById(departmendId);
     }
 
